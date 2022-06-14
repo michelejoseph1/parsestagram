@@ -1,9 +1,12 @@
 package com.example.instagram;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -98,6 +101,18 @@ public class MainActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             // Start the image capture intent to take photo
             startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
+        }
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE){
+            if(resultCode == RESULT_OK) {
+                Bitmap takenImage = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
+                ivPostImage.setImageBitmap(takenImage);
+            } else {
+                Toast.makeText(this, "picture wasn't taken!", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
