@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLogout;
     private File photoFile;
     public String photoFileName = "photo.jpg";
+    private Button feedButton;
 
 
 
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         ivPostImage = findViewById(R.id.ivPostImage);
         btnSubmit = findViewById(R.id.btnSubmit);
         etDescription = findViewById(R.id.etDescription);
+        feedButton = findViewById(R.id.feedButton);
 
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -59,9 +61,19 @@ public class MainActivity extends AppCompatActivity {
                 ParseUser.logOut();
                 Intent i = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(i);
-               finish();
             }
         });
+
+
+        feedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, FeedActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
