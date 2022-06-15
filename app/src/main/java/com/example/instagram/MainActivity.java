@@ -179,4 +179,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-//testing template for PR's
