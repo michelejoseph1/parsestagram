@@ -49,11 +49,8 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+![xOnkwbTn](https://user-images.githubusercontent.com/66920319/174398163-270c4d48-86a1-4e92-9d77-f51335365e0f.gif)
 
-[<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-](https://submissions.us-east-1.linodeobjects.com/metau_android/xOnkwbTn.gif)
-GIF created with [Kap](https://getkap.co/).
 
 ## Credits
 
